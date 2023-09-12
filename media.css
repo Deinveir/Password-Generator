@@ -1,0 +1,75 @@
+@media (max-width: 320px){
+    .container{
+        width: 100vw;
+    }
+
+    .pw-body{
+        font-size: 12px;
+    }
+
+    .generate{
+        font-size: 16px;
+    }
+
+    .pw{
+        font-size: 16px;
+    }
+
+    .pw-body{
+        gap: 15px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .container{
+        width: 320px;
+    }
+
+    .pw-body{
+        font-size: 14px;
+    }
+
+    .generate{
+        font-size: 18px;
+    }
+
+    .pw{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+    .container{
+        width: 375px;
+    }
+
+    .pw{
+        font-size: 20px;
+    }
+
+    .pw-body{
+        font-size: 16px;
+    }
+
+    .generate{
+        font-size: 20px;
+    }
+
+    .pw-body{
+        gap: 25px;
+    }
+}
+
+@media (min-width: 425px){
+    .container{
+        width: 425px;
+    }
+
+    .pw-body{
+        gap: 30px;
+    }
+
+    .pw{
+        font-size: 20px;
+    }
+}

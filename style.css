@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    /* font-family: 'Poppins', sans-serif; */
+    background-color: #9c35f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: #592880;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button{
+    cursor: pointer;
+}
+
+.generate{
+    background-color: #52154E;
+    border: none;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+/* targetting specific html element  */
+input[type="checkbox"]{
+    cursor: pointer;
+}
+
+.pw{
+    background-color: #9c35f0;
+    border: none;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    padding: 0 0 0 1rem;
+}
+
+/* .pw> *:last-child{
+    height: 100%;
+    text-align: left;
+} */
+
+.copy{
+    position: absolute;
+    right: 10px;
+    background-color: #06114f;
+    /* font-size: 15px; */
+    border: none;
+    color: white;
+    text-shadow: 2px 0px 5px black;
+    padding: 1rem;
+    top: 10px;
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.pw:hover + .copy{
+    opacity: 1;
+}
+
+.copy:hover{
+    opacity: 1;
+}
+
+.pw-header{
+    padding: 0 0 2rem 0;
+}
+
+.pw-body{
+    /* padding: 2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.pw-body div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#len{
+    width: 40px;
+}
