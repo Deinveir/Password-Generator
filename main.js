@@ -12,6 +12,9 @@ const lowLetters = 'abcdefghijklmnopqrstuvwxyz';
 const numbers = '123456789';
 const symbols = '!@#$%^&*()_=+-';
 
+const lenMax = lenEl.max;
+const lenMin = lenEl.min;
+
 function getUpper() {
     // Return random component of the upLetters variable
     return upLetters[Math.floor(Math.random() * upLetters.length)];
@@ -31,24 +34,22 @@ function getSymbol () {
 
 function generatePassword(){
     let len = lenEl.value;
-    const lenMax = lenEl.max;
-    const lenMin = lenEl.min;
 
     let password = '';
     
-    if (len >= lenMax){
+    if (len >= parseInt(lenMax)){
         for (let i=0; i <= lenMax-1 ; i++) {
             const x = generateX();
                 password += x;
         }
     }
-    else if (len <= lenMin){
+    else if (len <= parseInt(lenMin)){
         for (let i=0; i <= lenMin-1 ; i++) {
             const x = generateX();
                 password += x;
         }
     }
-    else if (lenMin < len && len < lenMax) {
+    else {
         for (let i=0; i <= len-1; i++){
             const x = generateX();
                 password += x;
