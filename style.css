@@ -71,8 +71,9 @@ input[type="checkbox"]{
     border: none;
     color: white;
     text-shadow: 2px 0px 5px black;
-    padding: 1rem;
-    top: 10px;
+    padding: .5rem;
+    top: 0;
+    right: 0;
     border-radius: 50px;
     opacity: 0;
     transition: opacity .3s ease;
@@ -106,4 +107,17 @@ input[type="checkbox"]{
 
 #len{
     width: 40px;
+}
+
+.min,
+.max{
+    margin: 0;
+}
+
+.form-control p {
+    font-weight: bold;
+}
+
+.form-control p span {
+    font-weight: 400;
 }

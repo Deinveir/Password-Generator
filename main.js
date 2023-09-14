@@ -30,18 +30,26 @@ function getSymbol () {
 }
 
 function generatePassword(){
-    const len = lenEl.value;
+    let len = lenEl.value;
     const lenMax = lenEl.max;
+    const lenMin = lenEl.min;
 
     let password = '';
     
-    if (len <= lenMax){
-        for (let i=0; i < len ; i++) {
+    if (len >= lenMax){
+        for (let i=0; i <= lenMax-1 ; i++) {
             const x = generateX();
                 password += x;
         }
-    }else if (len >= lenMax-1){
-        for (let i=0; i < lenMax ; i++) {
+    }
+    else if (len <= lenMin){
+        for (let i=0; i <= lenMin-1 ; i++) {
+            const x = generateX();
+                password += x;
+        }
+    }
+    else if (lenMin < len && len < lenMax) {
+        for (let i=0; i <= len-1; i++){
             const x = generateX();
                 password += x;
         }
@@ -76,7 +84,9 @@ function generateX() {
     return xs[Math.floor(Math.random() * xs.length)];
 }
 
-generateEl.addEventListener('click', generatePassword);
+generateEl.addEventListener('click', () => {   
+    generatePassword();
+});
 
 copyEl.addEventListener('click', () => {
     navigator.clipboard.writeText(pwEl.innerText);
